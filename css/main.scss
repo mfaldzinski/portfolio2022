@@ -1,0 +1,1100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300&display=swap');
+$font: 16px/1.8 "Poppins",
+sans-serif;
+$color-text: #fffffe;
+$background-color: #0f0e17;
+$main-color: #ff8906;
+$background-last: #ff8906;
+$background-footer: #000000;
+$second-color: #2b2c34;
+
+/* 
+-------
+General
+------- 
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: $font;
+    color: $color-text;
+    background: $background-color;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.loader-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $main-color;
+    transition: 0.5s ease-in-out;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: $color-text;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounce 1s ease-in-out infinite;
+    transition: 0.5s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 31px;
+    color: $second-color;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.title_portfolio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p_portfolio {
+    margin: 0 0 25px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 25px;
+}
+
+a {
+    text-decoration: none;
+    color: $main-color;
+    -webkit-transition: color 0.3s linear;
+    transition: color 0.3s linear;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 
+  -------
+  Forms
+  ------- 
+  */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    height: 50px;
+    background: $background-color;
+    color: $color-text;
+    border: 1px solid $second-color;
+    border-radius: 0;
+    padding: 10px;
+    -webkit-transition: border 0.3s linear;
+    transition: border 0.3s linear;
+    -webkit-appearance: none;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    background: $background-color;
+    color: $color-text;
+    border: 1px solid $second-color;
+    border-radius: 0;
+    padding: 10px;
+    -webkit-transition: border 0.3s linear;
+    transition: border 0.3s linear;
+    -webkit-appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border: 1px solid $second-color;
+}
+
+textarea {
+    height: 140px;
+    min-height: 140px;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1px solid $second-color;
+}
+
+
+/* 
+  -------
+  Button
+  ------- 
+  */
+
+.btn {
+    border: 2px solid $main-color;
+    background: none;
+    color: $main-color;
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: $color-text;
+        background: $main-color;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        -webkit-box-shadow: 0px 5px 40px -10px $main-color;
+        -moz-box-shadow: 0px 5px 40px -10px $main-color;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        content: '';
+        background: $main-color;
+        width: 5%;
+        color: $color-text;
+        position: absolute;
+        top: -45px;
+        bottom: -45px;
+        left: -15px;
+        z-index: -1;
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+    }
+    &:hover:before {
+        width: 150%;
+    }
+}
+
+.btn-github {
+    border: 2px solid $second-color;
+    border-radius: 15px;
+    background: none;
+    color: $color-text;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: $color-text;
+        background: $second-color;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        -webkit-box-shadow: 0px 5px 40px -10px $second-color;
+        -moz-box-shadow: 0px 5px 40px -10px $second-color;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        content: '';
+        background: $second-color;
+        width: 5%;
+        color: $color-text;
+        position: absolute;
+        top: -45px;
+        bottom: -45px;
+        left: -15px;
+        z-index: -1;
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+    }
+    &:hover:before {
+        width: 150%;
+    }
+}
+
+.btn-github-hover {
+    border: 2px solid $second-color;
+    border-radius: 15px;
+    background: $second-color;
+    font-weight: 300;
+    color: $color-text;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    -webkit-box-shadow: 0px 5px 40px -10px $second-color;
+    -moz-box-shadow: 0px 5px 40px -10px $second-color;
+    transition: all 0.3s ease 0s;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-portfolio {
+    border: 2px solid $main-color;
+    border-radius: 15px;
+    background: none;
+    text-align: center;
+    color: $main-color;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: $color-text;
+        background: $main-color;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        -webkit-box-shadow: 0px 5px 40px -10px $main-color;
+        -moz-box-shadow: 0px 5px 40px -10px $main-color;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        content: '';
+        background: $main-color;
+        width: 5%;
+        color: $color-text;
+        position: absolute;
+        top: -45px;
+        bottom: -45px;
+        left: -15px;
+        z-index: -1;
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+    }
+    &:hover:before {
+        width: 150%;
+    }
+}
+
+.btn-portfolio-last_p {
+    border: 2px solid $color-text;
+    border-radius: 15px;
+    background: none;
+    text-align: center;
+    color: $color-text;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: $main-color;
+        background: $color-text;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        -webkit-box-shadow: 0px 5px 40px -10px $color-text;
+        -moz-box-shadow: 0px 5px 40px -10px $color-text;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        content: '';
+        background: $color-text;
+        width: 5%;
+        color: $color-text;
+        position: absolute;
+        top: -45px;
+        bottom: -45px;
+        left: -15px;
+        z-index: -1;
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+    }
+    &:hover:before {
+        width: 150%;
+    }
+}
+
+.btn-portfolio-github {
+    border: 2px solid $second-color;
+    border-radius: 15px;
+    background: none;
+    color: $color-text;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: $color-text;
+        background: $second-color;
+        font-weight: 700 !important;
+        letter-spacing: 3px;
+        -webkit-box-shadow: 0px 5px 40px -10px $second-color;
+        -moz-box-shadow: 0px 5px 40px -10px $second-color;
+        transition: all 0.3s ease 0s;
+    }
+    &:before {
+        content: '';
+        background: $second-color;
+        width: 5%;
+        color: $color-text;
+        position: absolute;
+        top: -45px;
+        bottom: -45px;
+        left: -15px;
+        z-index: -1;
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+        -webkit-transition: width 0.2s linear;
+        transition: width 0.2s linear;
+    }
+    &:hover:before {
+        width: 150%;
+    }
+}
+
+
+/* 
+  ------------
+  Three Column
+  ------------
+  */
+
+.threeColumn {
+    margin: 0 -15px;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -7px;
+    text-align: center;
+    & .col {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.33%;
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0;
+        -webkit-transition: background 0.3s linear, -webkit-transform 0.2s linear;
+        transition: background 0.3s linear, -webkit-transform 0.2s linear;
+        transition: background 0.3s linear, transform 0.2s linear;
+        transition: background 0.3s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
+    }
+    & .col:hover {
+        background: $main-color;
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+    & .icon {
+        font-size: 50px;
+        border: 1px solid $color-text;
+        color: $color-text;
+        background: $color-text;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        line-height: 2;
+        margin: 30px auto;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+    & .icon:hover {
+        background: $color-text;
+        border-color: $color-text;
+        color: $color-text;
+    }
+}
+
+
+/* .threeColumn .icon:hover a {
+    color: $color-text;
+} */
+
+
+/* .threeColumn .icon a:hover {
+    color: $color-text;
+} */
+
+.threeColumn h3 a {
+    color: $color-text;
+    font-weight: bold;
+}
+
+
+/* 
+  ------------
+  Social Media
+  ------------
+  */
+
+.socialMedia {
+    margin: 0 0 10px;
+    & li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 20px 20px;
+    }
+    & a .fab {
+        display: block;
+        color: $color-text;
+    }
+    & a .fab:hover {
+        color: $color-text;
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+}
+
+
+/* 
+  ---------
+  Slick CSS
+  ---------
+  */
+
+.slick-list {
+    margin: 0 0 20px;
+    text-align: center;
+    & li {
+        overflow: hidden;
+    }
+}
+
+.slick-dots {
+    text-align: center;
+    & li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px 10px;
+    }
+    & li.slick-active button {
+        background: $main-color;
+    }
+    & li button {
+        border: 1px solid $main-color;
+        background: none;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        text-indent: -9999px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+
+/* 
+  --------------------
+  Horizontal Scrollbar
+  --------------------
+  */
+
+.scrollBarHolder {
+    height: 8px;
+    background: $color-text;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    & #scrollBar {
+        height: 8px;
+        background: $main-color;
+    }
+}
+
+
+/* 
+  ---------
+  Go to Top
+  ---------
+  */
+
+#gotop {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    background: $main-color;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+    display: none;
+    &:hover {
+        opacity: 0.7;
+    }
+    &:after {
+        width: 9px;
+        height: 9px;
+        content: '';
+        border-style: solid;
+        border-color: $color-text $color-text transparent transparent;
+        border-width: 2px 2px 0 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -3px 0px 0 -5px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+
+/* 
+  -------
+  Header
+  ------- 
+  */
+
+#header {
+    padding: 20px 0;
+    background: $background-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    & .container {
+        overflow: hidden;
+        position: relative;
+    }
+    & .logo {
+        float: left;
+        margin: 0 20px 0 0;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
+        color: $main-color;
+        position: relative;
+        overflow: hidden;
+    }
+    & .logo:before {
+        content: 'MFaldzinski.pl';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        color: $color-text;
+        overflow: hidden;
+        -webkit-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
+    & .logo:hover:before {
+        width: 100%;
+    }
+}
+
+.burgerMenu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    &:focus {
+        outline: none;
+    }
+}
+
+#nav {
+    float: right;
+    & li {
+        float: left;
+        margin: 0 0 0 40px;
+    }
+    & a {
+        padding: 0.5em 0.8em;
+        margin: 0.2em 0;
+        display: block;
+        color: $main-color;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    & a:before,
+    & a:after {
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        content: '';
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+        opacity: 0;
+    }
+    & a:before {
+        left: 0;
+        top: 0;
+        border-left: 3px solid $main-color;
+        border-top: 3px solid $main-color;
+        -webkit-transform: translate(100%, 50%);
+        transform: translate(100%, 50%);
+    }
+    & a:after {
+        right: 0;
+        bottom: 0;
+        border-right: 3px solid $main-color;
+        border-bottom: 3px solid $main-color;
+        -webkit-transform: translate(-100%, -50%);
+        transform: translate(-100%, -50%);
+    }
+    & a:hover,
+    & .current a {
+        color: $main-color;
+        font-weight: bold;
+    }
+    & a:hover:before,
+    & .current a:before,
+    & a:hover:after,
+    & .current a:after {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+
+
+/* 
+  ------
+  Main
+  ----
+  */
+
+main {
+    padding: 76px 0 0;
+}
+
+hr {
+    width: 50px;
+    border-top: 2px solid $main-color;
+    margin: 10px auto;
+}
+
+
+/* 
+  ----------
+  Hero Block
+  ----------
+  */
+
+.heroBlock {
+    padding: 100px 0;
+    text-align: center;
+    color: $second-color;
+    position: relative;
+    & .text-header {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 900;
+        color: $color-text;
+        position: relative;
+        overflow: hidden;
+    }
+    & span {
+        color: $main-color;
+    }
+    & p {
+        font-size: 35px;
+        font-weight: bold;
+        color: $color-text;
+    }
+    & p.small_info {
+        font-weight: bold;
+        font-size: 15px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    & .container {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+    }
+}
+
+
+/* 
+  -----
+  Block
+  -----
+  */
+
+.block {
+    padding: 50px 0;
+    & h2 {
+        margin: 0 0 40px;
+        text-align: center;
+    }
+}
+
+.welcome-text {
+    margin: 0 0 40px;
+    text-align: center;
+    color: $main-color;
+}
+
+.block-about {
+    padding: 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+/* 
+  -----------
+  About Block
+  -----------
+  */
+
+.aboutBlock {
+    text-align: center;
+    & .description {
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        color: $main-color;
+    }
+    & .counter {
+        color: $main-color;
+    }
+}
+
+.block-last_p {
+    padding: 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: $background-last;
+}
+
+@keyframes load {
+    from {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes load {
+    from {
+        width: 0%;
+    }
+}
+
+@-moz-keyframes load {
+    from {
+        width: 0%;
+    }
+}
+
+@-o-keyframes load {
+    from {
+        width: 0%;
+    }
+}
+
+
+/* 
+  -----------
+  Portfolio Block
+  -----------
+  */
+
+.myPortfolios img {
+    height: auto;
+    max-width: 100%;
+}
+
+.myPortfolios .img_last {
+    height: auto;
+    max-width: 100%;
+}
+
+.myPortfolios .img_portfolio {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* 
+  -------------
+  Contact Block
+  -------------
+  */
+
+.contactBlock .row {
+    margin: 0 -10px 20px;
+    overflow: hidden;
+    & .col {
+        padding: 0 10px;
+    }
+    & .col.smallCol {
+        float: left;
+        width: 33.33%;
+    }
+    & label {
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+
+/* 
+  -------------
+  Footer Block
+  -------------
+  */
+
+#footer {
+    background: $background-footer;
+    color: $color-text;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-size: 14px;
+    & a {
+        color: $main-color;
+    }
+}
+
+
+/* 
+  ----------
+  Responsive 
+  ----------
+  */
+
+
+/* targets device with width 768px and higher */
+
+@media only screen and (min-width: 768px) {
+    #nav ul {
+        display: block !important;
+    }
+    .myPortfolios .img_last {
+        height: auto;
+        max-width: 100%;
+    }
+    .myPortfolios .img_portfolio {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+
+/* targets device with width 1023px and lower */
+
+@media only screen and (max-width: 1023px) {
+    .threeColumn .col {
+        width: 100%;
+        padding: 0 15px 30px;
+    }
+    .serviceBlock {
+        padding: 50px 0 20px;
+    }
+}
+
+
+/* targets device with width 767px and lower */
+
+@media only screen and (max-width: 767px) {
+    body,
+    .btn {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .title_portfolio {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .p_portfolio {
+        font-size: 12px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 10px;
+    }
+    #header {
+        padding: 20px 0 0;
+        & .logo {
+            float: none;
+            margin: 0 0 20px;
+        }
+    }
+    .burgerMenu {
+        display: block;
+        color: $main-color;
+    }
+    #nav {
+        float: none;
+        margin: 0 0 20px;
+        & ul {
+            display: none;
+            background: $background-color;
+            overflow: hidden;
+            text-align: right;
+            padding: 10px 15px 0;
+        }
+        & li {
+            float: none;
+            margin: 0 0 10px;
+            font-weight: bold;
+        }
+    }
+    .heroBlock {
+        padding: 60px 0;
+        & .text-header {
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: $color-text;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+    .block {
+        padding: 30px 0;
+        & h2 {
+            margin: 0 0 20px;
+        }
+    }
+    .threeColumn .col {
+        font-size: 14px;
+        padding: 0 15px 10px;
+    }
+    .threeColumn .icon {
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+    .contactBlock .col.smallCol {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .contactBlock .col.smallCol:last-child {
+        margin: 0;
+    }
+    #footer {
+        padding: 30px 0 10px;
+    }
+    .socialMedia li {
+        margin: 0 10px 5px;
+    }
+    .socialMedia a {
+        font-size: 20px;
+    }
+    .img_last {
+        height: auto;
+        max-width: 100%;
+        padding-top: 50px;
+    }
+    .myPortfolios .img_portfolio {
+        height: auto;
+        max-width: 100%;
+        padding-top: 50px;
+    }
+}
+
+#header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.column_contact {
+    float: left;
+    width: 50%;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.avatar {
+    height: 50%;
+    width: 50%;
+}
+
+
+/*# sourceMappingURL=main.css.map */
