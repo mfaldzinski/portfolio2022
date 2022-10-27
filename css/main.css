@@ -1,0 +1,1096 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300&display=swap");
+/* 
+-------
+General
+------- 
+*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 16px/1.8 "Poppins", sans-serif;
+  color: #fffffe;
+  background: #0f0e17;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.loader-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff8906;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fffffe;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: bounce 1s ease-in-out infinite;
+          animation: bounce 1s ease-in-out infinite;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 31px;
+  color: #2b2c34;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.title_portfolio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p_portfolio {
+  margin: 0 0 25px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #ff8906;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+  -------
+  Forms
+  ------- 
+  */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  height: 50px;
+  background: #0f0e17;
+  color: #fffffe;
+  border: 1px solid #2b2c34;
+  border-radius: 0;
+  padding: 10px;
+  -webkit-transition: border 0.3s linear;
+  transition: border 0.3s linear;
+  -webkit-appearance: none;
+}
+
+textarea {
+  width: 100%;
+  height: 50px;
+  background: #0f0e17;
+  color: #fffffe;
+  border: 1px solid #2b2c34;
+  border-radius: 0;
+  padding: 10px;
+  -webkit-transition: border 0.3s linear;
+  transition: border 0.3s linear;
+  -webkit-appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border: 1px solid #2b2c34;
+}
+
+textarea {
+  height: 140px;
+  min-height: 140px;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #2b2c34;
+}
+
+/* 
+  -------
+  Button
+  ------- 
+  */
+.btn {
+  border: 2px solid #ff8906;
+  background: none;
+  color: #ff8906;
+  border-radius: 15px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: #fffffe;
+  background: #ff8906;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px #ff8906;
+  -moz-box-shadow: 0px 5px 40px -10px #ff8906;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:before {
+  content: '';
+  background: #ff8906;
+  width: 5%;
+  color: #fffffe;
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.btn:hover:before {
+  width: 150%;
+}
+
+.btn-github {
+  border: 2px solid #2b2c34;
+  border-radius: 15px;
+  background: none;
+  color: #fffffe;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-github:hover {
+  color: #fffffe;
+  background: #2b2c34;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -moz-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-github:before {
+  content: '';
+  background: #2b2c34;
+  width: 5%;
+  color: #fffffe;
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.btn-github:hover:before {
+  width: 150%;
+}
+
+.btn-github-hover {
+  border: 2px solid #2b2c34;
+  border-radius: 15px;
+  background: #2b2c34;
+  font-weight: 300;
+  color: #fffffe;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  -webkit-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -moz-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-portfolio {
+  border: 2px solid #ff8906;
+  border-radius: 15px;
+  background: none;
+  text-align: center;
+  color: #ff8906;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-portfolio:hover {
+  color: #fffffe;
+  background: #ff8906;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px #ff8906;
+  -moz-box-shadow: 0px 5px 40px -10px #ff8906;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-portfolio:before {
+  content: '';
+  background: #ff8906;
+  width: 5%;
+  color: #fffffe;
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.btn-portfolio:hover:before {
+  width: 150%;
+}
+
+.btn-portfolio-last_p {
+  border: 2px solid #fffffe;
+  border-radius: 15px;
+  background: none;
+  text-align: center;
+  color: #fffffe;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-portfolio-last_p:hover {
+  color: #ff8906;
+  background: #fffffe;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px #fffffe;
+  -moz-box-shadow: 0px 5px 40px -10px #fffffe;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-portfolio-last_p:before {
+  content: '';
+  background: #fffffe;
+  width: 5%;
+  color: #fffffe;
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.btn-portfolio-last_p:hover:before {
+  width: 150%;
+}
+
+.btn-portfolio-github {
+  border: 2px solid #2b2c34;
+  border-radius: 15px;
+  background: none;
+  color: #fffffe;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-portfolio-github:hover {
+  color: #fffffe;
+  background: #2b2c34;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -moz-box-shadow: 0px 5px 40px -10px #2b2c34;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-portfolio-github:before {
+  content: '';
+  background: #2b2c34;
+  width: 5%;
+  color: #fffffe;
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.btn-portfolio-github:hover:before {
+  width: 150%;
+}
+
+/* 
+  ------------
+  Three Column
+  ------------
+  */
+.threeColumn {
+  margin: 0 -15px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -7px;
+  text-align: center;
+}
+
+.threeColumn .col {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33%;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  -webkit-transition: background 0.3s linear, -webkit-transform 0.2s linear;
+  transition: background 0.3s linear, -webkit-transform 0.2s linear;
+  transition: background 0.3s linear, transform 0.2s linear;
+  transition: background 0.3s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.threeColumn .col:hover {
+  background: #ff8906;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.threeColumn .icon {
+  font-size: 50px;
+  border: 1px solid #fffffe;
+  color: #fffffe;
+  background: #fffffe;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 2;
+  margin: 30px auto;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.threeColumn .icon:hover {
+  background: #fffffe;
+  border-color: #fffffe;
+  color: #fffffe;
+}
+
+/* .threeColumn .icon:hover a {
+    color: $color-text;
+} */
+/* .threeColumn .icon a:hover {
+    color: $color-text;
+} */
+.threeColumn h3 a {
+  color: #fffffe;
+  font-weight: bold;
+}
+
+/* 
+  ------------
+  Social Media
+  ------------
+  */
+.socialMedia {
+  margin: 0 0 10px;
+}
+
+.socialMedia li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px 20px;
+}
+
+.socialMedia a .fab {
+  display: block;
+  color: #fffffe;
+}
+
+.socialMedia a .fab:hover {
+  color: #fffffe;
+  -webkit-transform: rotate(720deg);
+  transform: rotate(720deg);
+}
+
+/* 
+  ---------
+  Slick CSS
+  ---------
+  */
+.slick-list {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.slick-list li {
+  overflow: hidden;
+}
+
+.slick-dots {
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 10px;
+}
+
+.slick-dots li.slick-active button {
+  background: #ff8906;
+}
+
+.slick-dots li button {
+  border: 1px solid #ff8906;
+  background: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 
+  --------------------
+  Horizontal Scrollbar
+  --------------------
+  */
+.scrollBarHolder {
+  height: 8px;
+  background: #fffffe;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.scrollBarHolder #scrollBar {
+  height: 8px;
+  background: #ff8906;
+}
+
+/* 
+  ---------
+  Go to Top
+  ---------
+  */
+#gotop {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: #ff8906;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  display: none;
+}
+
+#gotop:hover {
+  opacity: 0.7;
+}
+
+#gotop:after {
+  width: 9px;
+  height: 9px;
+  content: '';
+  border-style: solid;
+  border-color: #fffffe #fffffe transparent transparent;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3px 0px 0 -5px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* 
+  -------
+  Header
+  ------- 
+  */
+#header {
+  padding: 20px 0;
+  background: #0f0e17;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+#header .container {
+  overflow: hidden;
+  position: relative;
+}
+
+#header .logo {
+  float: left;
+  margin: 0 20px 0 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+  color: #ff8906;
+  position: relative;
+  overflow: hidden;
+}
+
+#header .logo:before {
+  content: 'MFaldzinski.pl';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  color: #fffffe;
+  overflow: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#header .logo:hover:before {
+  width: 100%;
+}
+
+.burgerMenu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 18px;
+}
+
+.burgerMenu:focus {
+  outline: none;
+}
+
+#nav {
+  float: right;
+}
+
+#nav li {
+  float: left;
+  margin: 0 0 0 40px;
+}
+
+#nav a {
+  padding: 0.5em 0.8em;
+  margin: 0.2em 0;
+  display: block;
+  color: #ff8906;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#nav a:before,
+#nav a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+#nav a:before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid #ff8906;
+  border-top: 3px solid #ff8906;
+  -webkit-transform: translate(100%, 50%);
+  transform: translate(100%, 50%);
+}
+
+#nav a:after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #ff8906;
+  border-bottom: 3px solid #ff8906;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+#nav a:hover,
+#nav .current a {
+  color: #ff8906;
+  font-weight: bold;
+}
+
+#nav a:hover:before,
+#nav .current a:before,
+#nav a:hover:after,
+#nav .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+/* 
+  ------
+  Main
+  ----
+  */
+main {
+  padding: 76px 0 0;
+}
+
+hr {
+  width: 50px;
+  border-top: 2px solid #ff8906;
+  margin: 10px auto;
+}
+
+/* 
+  ----------
+  Hero Block
+  ----------
+  */
+.heroBlock {
+  padding: 100px 0;
+  text-align: center;
+  color: #2b2c34;
+  position: relative;
+}
+
+.heroBlock .text-header {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 900;
+  color: #fffffe;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBlock span {
+  color: #ff8906;
+}
+
+.heroBlock p {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fffffe;
+}
+
+.heroBlock p.small_info {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.heroBlock:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.heroBlock .container {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+/* 
+  -----
+  Block
+  -----
+  */
+.block {
+  padding: 50px 0;
+}
+
+.block h2 {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.welcome-text {
+  margin: 0 0 40px;
+  text-align: center;
+  color: #ff8906;
+}
+
+.block-about {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* 
+  -----------
+  About Block
+  -----------
+  */
+.aboutBlock {
+  text-align: center;
+}
+
+.aboutBlock .description {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  color: #ff8906;
+}
+
+.aboutBlock .counter {
+  color: #ff8906;
+}
+
+.block-last_p {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ff8906;
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+
+/* 
+  -----------
+  Portfolio Block
+  -----------
+  */
+.myPortfolios img {
+  height: auto;
+  max-width: 100%;
+}
+
+.myPortfolios .img_last {
+  height: auto;
+  max-width: 100%;
+}
+
+.myPortfolios .img_portfolio {
+  height: auto;
+  max-width: 100%;
+}
+
+/* 
+  -------------
+  Contact Block
+  -------------
+  */
+.contactBlock .row {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+
+.contactBlock .row .col {
+  padding: 0 10px;
+}
+
+.contactBlock .row .col.smallCol {
+  float: left;
+  width: 33.33%;
+}
+
+.contactBlock .row label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 
+  -------------
+  Footer Block
+  -------------
+  */
+#footer {
+  background: #000000;
+  color: #fffffe;
+  text-align: center;
+  padding: 40px 0 20px;
+  font-size: 14px;
+}
+
+#footer a {
+  color: #ff8906;
+}
+
+/* 
+  ----------
+  Responsive 
+  ----------
+  */
+/* targets device with width 768px and higher */
+@media only screen and (min-width: 768px) {
+  #nav ul {
+    display: block !important;
+  }
+  .myPortfolios .img_last {
+    height: auto;
+    max-width: 100%;
+  }
+  .myPortfolios .img_portfolio {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* targets device with width 1023px and lower */
+@media only screen and (max-width: 1023px) {
+  .threeColumn .col {
+    width: 100%;
+    padding: 0 15px 30px;
+  }
+  .serviceBlock {
+    padding: 50px 0 20px;
+  }
+}
+
+/* targets device with width 767px and lower */
+@media only screen and (max-width: 767px) {
+  body,
+  .btn {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .title_portfolio {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .p_portfolio {
+    font-size: 12px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px;
+  }
+  #header {
+    padding: 20px 0 0;
+  }
+  #header .logo {
+    float: none;
+    margin: 0 0 20px;
+  }
+  .burgerMenu {
+    display: block;
+    color: #ff8906;
+  }
+  #nav {
+    float: none;
+    margin: 0 0 20px;
+  }
+  #nav ul {
+    display: none;
+    background: #0f0e17;
+    overflow: hidden;
+    text-align: right;
+    padding: 10px 15px 0;
+  }
+  #nav li {
+    float: none;
+    margin: 0 0 10px;
+    font-weight: bold;
+  }
+  .heroBlock {
+    padding: 60px 0;
+  }
+  .heroBlock .text-header {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #fffffe;
+    position: relative;
+    overflow: hidden;
+  }
+  .block {
+    padding: 30px 0;
+  }
+  .block h2 {
+    margin: 0 0 20px;
+  }
+  .threeColumn .col {
+    font-size: 14px;
+    padding: 0 15px 10px;
+  }
+  .threeColumn .icon {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+  }
+  .contactBlock .col.smallCol {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .contactBlock .col.smallCol:last-child {
+    margin: 0;
+  }
+  #footer {
+    padding: 30px 0 10px;
+  }
+  .socialMedia li {
+    margin: 0 10px 5px;
+  }
+  .socialMedia a {
+    font-size: 20px;
+  }
+  .img_last {
+    height: auto;
+    max-width: 100%;
+    padding-top: 50px;
+  }
+  .myPortfolios .img_portfolio {
+    height: auto;
+    max-width: 100%;
+    padding-top: 50px;
+  }
+}
+
+#header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column_contact {
+  float: left;
+  width: 50%;
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.avatar {
+  height: 50%;
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */
